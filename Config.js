@@ -32,7 +32,7 @@ global.autoTyping = false //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = true //auto read messages
 global.autobio = false //auto update bio
-global.anti92 = true //auto block +92 
+global.anti92 = false  //auto block +92 
 global.autoread_status = true //auto view status/story
 
 
