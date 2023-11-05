@@ -8,7 +8,7 @@ global.ytname = "YT: AyushBotz.inc"
 global.socialm = "GitHub: Ayushpandey023"
 global.location = "Indian"
 
-global.ownernumber = '919931122319'  //creator number
+  
 global.ownername = 'Ayush' //owner name
 global.botname = '𝐌𝐀𝐑𝐈𝐀-𝐌𝐃' //name of the bot
 
@@ -21,7 +21,7 @@ global.themeemoji = '🧩'
 global.wm = "Ayush botz inc."
 
 //theme link
-global.link = '' // if you want to send bot reply with group link then put your link here 🌿 
+global.link = 'https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM' // if you want to send bot reply with group link then put your link here 🌿 
 global.support = 'https://chat.whatsapp.com/DYp7FwfL9xsKURihcdT0l8'
 //custom prefix
 global.prefa = ['.'] //put here your fav prefix like +×÷= etc.
