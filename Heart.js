@@ -1599,8 +1599,7 @@ Here's the list of my Commands.
 └──────────⊰`
 const Mariaarray= [
             "https://telegra.ph/file/a979e37a8d2971c088ff4.jpg",
-
-            "https://c.tenor.com/9-7azOBpr84AAAPo/Maria-nakano-and-i-love-you.mp4",
+            "https://telegra.ph/file/2a1939dd4157aa5832cc0.jpg",
             "https://telegra.ph/file/3b13d4f143cec77d49c8f.jpg",
             "https://telegra.ph/file/b4a2abb0edb80ef663ce2.jpg",
             "https://telegra.ph/file/99dabefbd7f7832526a97.jpg"
