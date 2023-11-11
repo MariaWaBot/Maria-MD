@@ -1211,7 +1211,7 @@ case 'chatgpt': case 'gpt':{
         break
       case "support":
       
-        let tex = `📍My Developer's Group📍\n\n*🎇 𝐌𝐚𝐫𝐢𝐚 support group:🎇* *https://chat.whatsapp.com/FoS7pSPtfMqBuoireK4aAJ*`
+        let tex = `📍My Developer's Group📍\n\n*🎇 𝐌𝐚𝐫𝐢𝐚 support group:🎇*\n\n*https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM*`
 
         await Maria.sendMessage(m.sender, { text: `${tex}` },);
 
@@ -1225,7 +1225,7 @@ case 'chatgpt': case 'gpt':{
 *🌟Description:* A WhatsApp Bot With Rich  features based on Maria
 *🚦Uptime:* ${runtime(process.uptime())}
 *🕸Version:* 1.2.0
-*👤Owner:*  ${global.Owner}
+*👤Creator:*  𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚
 *🎐supportgc:* ${global.support}\n
 *Powered by Ayush*`
 Maria.sendMessage(m.chat, { video: { url: `https://media.tenor.com/VmwZnGeD0oEAAAPo/maria-naruse-shinmai-maou-no-testament.mp4` }, caption: ifx, gifPlayback: true }, { quoted: m });
