@@ -1571,7 +1571,17 @@ Here's the list of my Commands.
 │⊳ 🎟️ ${prefix}truth
 │⊳ 🎟️ ${prefix}dare
 │⊳🎟️ ${prefix}couple 
-│⊳🎟️ ${prefix}
+│⊳🎟️ ${prefix}uglycheck
+│⊳🎟️ ${prefix}lovelycheck
+│⊳🎟️ ${prefix}prettycheck
+│⊳🎟️ ${prefix}hornycheck
+│⊳🎟️ ${prefix}lesbiancheck
+│⊳🎟️ ${prefix}lesbicheck
+│⊳🎟️ ${prefix}lesbiancheck
+│⊳🎟️ ${prefix}cutecheck
+│⊳🎟️ ${prefix}gaycheck
+│⊳🎟️ ${prefix}greatcheck
+│⊳🎟️ ${prefix}awesomecheck
 └──────────⊰
 
 ┌──⊰ _*⛩️OTHERS⛩️*_
@@ -1608,7 +1618,7 @@ const Mariaarray= [
         
             const Mariaselection = Mariaarray[Math.floor(Math.random()*Mariaarray.length)]
         
-            Maria.sendMessage(from,{video:{url:Mariaselection},gifPlayback:true,caption:txt},{quoted:m})
+            Maria.sendMessage(from,{image:{url:Mariaselection},gifPlayback:true,caption:txt},{quoted:m})
 
 break           
                 
