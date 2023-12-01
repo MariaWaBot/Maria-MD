@@ -1549,6 +1549,7 @@ Here's the list of my Commands.
 └──────────⊰
 
 ┌──⊰ _*👮🏻‍♂️GROUP👮🏻‍♂️*_
+│⊳ 🍁 ${prefix}Antilink
 │⊳ 🍁 ${prefix}closetime
 │⊳ 🍁 ${prefix}opentime
 │⊳ 🍁 ${prefix}kick
