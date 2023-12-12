@@ -1610,7 +1610,7 @@ const Mariaarray= [
         
             const Mariaselection = Mariaarray[Math.floor(Math.random()*Mariaarray.length)]
         
-            Maria.sendMessage(from,{image:{url: "./Gallery/Mariach"},caption:txt},{quoted:m})
+            Maria.sendMessage(from,{image:{url: "./Gallery/Mariach.jpg"},caption:txt},{quoted:m})
 
 break           
                 case 'circlevideo': {
