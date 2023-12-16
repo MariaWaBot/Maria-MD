@@ -24,7 +24,8 @@ const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 /////log
 global.ownernumber = '919931122319' 
 //Gallery/database
-let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'))
+let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
+const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
 let _owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
 let owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
 let _afk = JSON.parse(fs.readFileSync('./Gallery/database/afk-user.json'))
@@ -110,7 +111,8 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         const mentionByReply = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.participant || '' : ''
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const isCreator = [ownernumber, ..._owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-      const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
+      const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false;
+      const isNsfw = m.isGroup ? isnsfw.includes(from) : false;
 //group chat msg by Ayush
 const reply = (teks) => {
 Maria.sendMessage(m.chat,
@@ -1664,6 +1666,17 @@ Cieeee, What's Going On❤️💖👀`,
           );
         }
         break;
+case 'test': {
+  if (!isNsfw) return m.reply(mess.nsfw);
+  if (m.isGroup) return m.reply(mess.group);
+  m.reply(mess.wait);
+  await Maria.sendMessage(m.chat, {
+    image: await getBuffer('https://ayushhh.onrender.com'),
+    caption: '```Random NSFW image```',
+  }, { quoted: m });
+}
+break;
+			    
               case 'awesomecheck':
   case 'greatcheck':
     case 'gaycheck':
