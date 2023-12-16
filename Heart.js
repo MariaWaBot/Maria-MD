@@ -1668,7 +1668,7 @@ Cieeee, What's Going On❤️💖👀`,
         break;
 case 'test': {
   if (!isNsfw) return m.reply(mess.nsfw);
-  if (m.isGroup) return m.reply(mess.group);
+  if (!m.isGroup) return m.reply(mess.group);
   m.reply(mess.wait);
   await Maria.sendMessage(m.chat, {
     image: await getBuffer('https://ayushhh.onrender.com'),
