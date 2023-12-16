@@ -38,7 +38,7 @@
 </h2>
 
 ## 
-- After you getting the `creds.json. ` then upload the `creds.json` in the `./Gallery/session` folder. then you can deploy on your favourite platform.
+
 
 
    
