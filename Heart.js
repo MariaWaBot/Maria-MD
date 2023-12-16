@@ -1088,13 +1088,15 @@ break
                 })
             }
             break
+
 case 'play':  case 'song': {
 if (!text) return reply(`Example : ${prefix + command} anime whatsapp status`)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
 let yts = require("youtube-yts")
         let search = await yts(text)
         let anup3k = search.videos[0]
-const pl= await Ayushplaymp3.mp3(anup3k.url)
+const pl= await Ayushplaymp3.mp3(anup3k.url);
+m.reply('```✅ Song found! Sending...```');
 await Maria.sendMessage(m.chat,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
