@@ -113,7 +113,7 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         const isCreator = [ownernumber, ..._owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false;
       const isNsfw = m.isGroup ? isnsfw.includes(from) : false;
-      const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
+      const AntiNsfw = m.isGroup ? isnsfw.includes(from) : false
  /////
  
 //group chat msg by Ayush
