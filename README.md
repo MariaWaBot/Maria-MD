@@ -8,7 +8,7 @@
 
 ### ✧✧ This bot is still under development so if you want to recode/modify it, pls check this main repo once in 3 days because i am continuously debugging it and making major changes in it.
 </br>
-## ✧✧✧ What'new v1.0.2?
+## ✧✧✧ What' new v1.0.2?
 
 ```
 1. pinterest added ✅️
