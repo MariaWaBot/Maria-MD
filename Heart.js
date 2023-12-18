@@ -118,6 +118,21 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
 const pickRandom = (arr) => {
 return arr[Math.floor(Math.random() * arr.length)]
 }
+
+	//rand
+	    // Function to filter JPG and PNG files from a directory
+const getRandomImage = (directory) => {
+  const files = fs.readdirSync(directory)
+    .filter(file => {
+      return file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.png');
+    });
+
+  if (files.length === 0) return null;
+
+  const randomFile = files[Math.floor(Math.random() * files.length)];
+  return path.join(directory, randomFile);
+};
+
 //group chat msg by Ayush
 const reply = (teks) => {
 Maria.sendMessage(m.chat,
@@ -1550,7 +1565,7 @@ Here's the list of my Commands.
 ┌──⊰ _*🧩OWNER🧩*_
 │⊳ ♠️ ${prefix}session
 │⊳ ♠️ ${prefix}join
-│⊳ ♠️ ${prefix}mode [self/public]
+│⊳ ♠️ ${prefix}mode *[self/public]*
 │⊳ ♠️ ${prefix}shutdown
 │⊳ ♠️ ${prefix}restart
 │⊳ ♠️ ${prefix}autoread *[option]*
@@ -1559,7 +1574,6 @@ Here's the list of my Commands.
 │⊳ ♠️ ${prefix}autorecordtyp *[option]*
 │⊳ ♠️ ${prefix}autobio *[option]*
 │⊳ ♠️ ${prefix}autoswview *[option]*
-│⊳ ♠️ ${prefix}mode *[option]*
 │⊳ ♠️ ${prefix}block
 │⊳ ♠️ ${prefix}unblock
 │⊳ ♠️ ${prefix}backup
@@ -1634,18 +1648,9 @@ Here's the list of my Commands.
 
 🍂 Obtain the full list of NSFW commands by typing  *${prefix}nsfwmenu* 
 `
-const Mariaarray= [
-            "https://telegra.ph/file/a979e37a8d2971c088ff4.jpg",
-            "https://telegra.ph/file/2a1939dd4157aa5832cc0.jpg",
-            "https://telegra.ph/file/3b13d4f143cec77d49c8f.jpg",
-            "https://telegra.ph/file/b4a2abb0edb80ef663ce2.jpg",
-            "https://telegra.ph/file/99dabefbd7f7832526a97.jpg"
-            
-            ]
-        
-            const Mariaselection = Mariaarray[Math.floor(Math.random()*Mariaarray.length)]
-        
-            Maria.sendMessage(from,{image:{url: "./Gallery/Mariach.jpg"},caption:txt,
+
+ const imageDirectory = './Gallery/Theme-logo;
+  const randomImage = getRandomImage(imageDirectory);           Maria.sendMessage(from,{image:{url: imageDirectory},caption:txt,
 contextInfo: {
         externalAdReply: {
           title: global.botname,
