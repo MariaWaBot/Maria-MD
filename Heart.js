@@ -1550,8 +1550,7 @@ Here's the list of my Commands.
 ┌──⊰ _*🧩OWNER🧩*_
 │⊳ ♠️ ${prefix}session
 │⊳ ♠️ ${prefix}join
-│⊳ ♠️ ${prefix}public 
-│⊳ ♠️ ${prefix}self
+│⊳ ♠️ ${prefix}mode [self/public]
 │⊳ ♠️ ${prefix}shutdown
 │⊳ ♠️ ${prefix}restart
 │⊳ ♠️ ${prefix}autoread *[option]*
@@ -1702,26 +1701,19 @@ Cieeee, What's Going On❤️💖👀`,
         break;
         //mode 
         
+
 case 'public': {
-    if (!isCreator) return reply(mess.owner);
-
-    Maria.public = true;
-    reply('🌐 I am now publicly accessible!');
-    Maria.setStatus(`Mode: Public`);
-}
-break;
-
-        
-Maria.setStatus(status); 
-      
-case 'self': {
-    if (!isCreator) return reply(mess.owner);
-
-    Maria.public = false;
-    reply('🔐 Only the owner can use me now!');
-    Maria.setStatus(`Mode: Self`);
-}
-break;
+                if (!isCreator) return reply(mess.owner)
+                Maria.public = true
+                reply('*Successful in Changing To Public Usage*')
+            }
+            break
+            case 'self': {
+                if (!isCreator) return reply(mess.owner)
+                Maria.public = false
+                reply('*Successful in Changing To Self Usage*')
+            }
+            break
 
 
         ///nsfw commands
