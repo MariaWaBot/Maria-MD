@@ -23,7 +23,7 @@ global.wm = "Ayush botz inc."
 global.link = 'https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM'
 
 //custom prefix
-global.prefa = ['.']
+global.prefa = ['#']
 
 //false=disable and true=enable
 global.autoRecording = false //auto recording
@@ -38,15 +38,15 @@ global.autoread_status = false //auto view status/story
 
 //reply messages
 global.mess = {
-    done: 'Done !',
-    prem: 'This feature can be used by premium user only',
-    admin: 'This feature can be used by admin only',
-    botAdmin: 'This feature can only be used when the bot is a group admin ',
-    owner: 'This feature can be used by owner only',
-    group: 'This feature is only for groups',
-    private: 'This feature is only for private chats',
-    wait: 'In process... ',    
-    error: 'Error!',
+    done: '*job done* ✅️',
+    prem: '*This feature can be used by premium user only*',
+    admin: '*This feature can be used by admin only*',
+    botAdmin: '*This feature can only be used when the bot is a group admin* ',
+    owner: '*This feature can be used by owner only*',
+    group: '*This feature is only for groups*',
+    private: '*This feature is only for private chats*',
+    wait: '*In process...* ',    
+    error: '*Error!*',
 }
 
 global.thumb = fs.readFileSync('./Gallery/thumb.jpg')
