@@ -131,7 +131,7 @@ cd Maria-Md
 
 rm -rf session
 
-npm i
+yarn install
 
 npm start
 
