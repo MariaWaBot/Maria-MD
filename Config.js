@@ -23,7 +23,7 @@ global.wm = "Ayush botz inc."
 global.link = 'https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM'
 
 //custom prefix
-global.prefa = ['#']
+global.prefa = ['.']
 
 //false=disable and true=enable
 global.autoRecording = false //auto recording
