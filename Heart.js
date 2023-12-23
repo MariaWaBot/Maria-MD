@@ -303,7 +303,200 @@ if (isCreator) return m.reply(bvl)
 Maria.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
+  let smallinput = budy.toLowerCase()
+
+if (smallinput.includes(`afternoon`)) {
+
+                  reply(`gud afternoon ${pushname}, 😚 how is the day goin?`)
+
+                  }
+
+
+
+		if (smallinput.includes(`Wow`)) {
+
+                  reply(`😍😍`)
+
+                  }
+                  
+                  
+                  if (smallinput.includes(`wow`)) {
+
+                  reply(`😍😍`)
+
+                  }
+                  
+                  
+                  if (smallinput.includes(`morning`)) {
+
+                  reply(`good morning ${pushname}', have a nice day 😁😘`)
+
+                  }
+
+        if (smallinput.includes(`Night`)) {
+
+                  reply(`good night 😽😽${pushname}', sweetdreams💜💜`)
+
+                  }
+
+                          if (smallinput.includes(`Lol`)) {
+
+                  reply(`😹😹👈`)
+
+                  }                
+                  
+                                                              if (smallinput.includes(`Intro ?`)) {
+
+                  reply(`i am Maria BOT, a whatsapp bot created by Ayush, maybe am not the one whom u asked but i just want u to knw that i am a bot, type #menu to see all available features😊`)
+
+                  }
+
+       if (smallinput.includes(`Maria`)) {
+
+         reply(`Hello frnd mai Maria BOT hun😁.\ntype😊👉${prefix}menu`)
+
+                  }     
+
+       if (smallinput.includes(`Maria`)) {
+
+         reply(`Hello frnd mai Maria BOT hun😁.\ntype😊👉${prefix}menu`)
+
+                  }     
+
+       if (smallinput.includes(`Bot`)) {
+
+         reply(`Hello frnd mai Maria BOT hun😁.\ntype😊👉${prefix}menu`)
+
+                  }     
+
+       if (smallinput.includes(`bot`)) {
+
+         reply(`Hello frnd mai Maria BOT hun😁.\ntype😊👉${prefix}menu`)
+
+                  }     
+
+       if (smallinput.includes(`@919931122319`)) {
+
+                  reply(`what happen, any problem?🤗`)
+
+                  }
+                 
+       if (smallinput.includes(`@919931122319`)) {
+
+                  reply(`sorry mate, Ayush is busy`)
+
+                  }
+
+
+       if (smallinput.includes(`Hi`)) {
+
+                  reply(`annyeonghaseyo,😊 how are you?`)
+
+                  }
+
+       if (smallinput.includes(`Morning`)) {
+
+                  reply(`good morning ${pushname}', have a nice day 😁😘`)
+
+                  }
+ 
+        if (smallinput.includes(`night`)) {
+
+
+
+                  reply(`good night 😽😽${pushname}', sweetdreams💜💜`)
+
+                  }
+
+		if (smallinput.includes(`Bye`)) {
+
+                  reply(`bye my frnd take care 💜😽`)
+
+                  }
+
+
+
+		if (smallinput.includes(`bye `)) {
+
+                  reply(`bye my frnd, take care 😽😽`)
+
+                  }
+
+
+
+		if (smallinput.includes(`koi hai ?`)) {
+
+                  reply(`ha mai hun na😹😹`)
+
+                  }
+
+
+
+                  
+
+		if (smallinput.includes(`Hello`)) {
+
+                  reply(`ohayo🖐️🖐️ ${pushname}`)
+
   
+  
+                }
+
+		if (smallinput.includes(`Thanks`)) {
+
+                  reply(`welcome😽😽 ${pushname}`)
+
+                  }
+                  
+                  if (smallinput.includes(`thanks`)) {
+
+                  reply(`no problem😽😽 ${pushname}`)
+
+                  }
+                  
+                  
+                  if (smallinput.includes(`hey`)) {
+
+                  reply(`wassup🖐️  ${pushname}`)
+
+                  }
+                  
+                  
+                  if (smallinput.includes(`thnx`)) {
+
+                  reply(`you are welcome💜${pushname}`)
+
+                  }
+
+
+if (smallinput.includes(`Thnx`)) {
+
+                  reply(`you are welcome😽💜 ${pushname}`)
+
+                  }
+                  
+                  if (smallinput.includes(`hello`)) {
+
+                  reply(`ohayo🖐️ ${pushname}`)
+
+                  }
+
+
+if (smallinput.includes(`thank you`)) {
+
+                  reply(`you are welcome😊😊 ${pushname}`)
+
+                  }
+
+		if (smallinput.includes(`Thank you`)) {
+
+                  reply(`u r welcome my frnd😽😽 ${pushname}`)
+
+                  }
+
+
+
+
             switch (command) {
             case 'antilink': {
                             if (!m.isGroup) return reply(mess.group)
@@ -1155,7 +1348,6 @@ break
             break
 
 case 'play':  case 'song': {
-try {
 Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
 if (!text) return reply(`Example : ${prefix + command} anime whatsapp status`)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
@@ -1180,10 +1372,6 @@ await Maria.sendMessage(m.chat,{
     },
 },{quoted:m})
 await fs.unlinkSync(pl.path)
-} catch(err) {
-console.log(err);
-m.reply(err);
-}
 }
 break
 case 'ytmp4': case 'ytvideo': {
@@ -1631,6 +1819,9 @@ Here's the list of my Commands.
 └──────────⊰
 
 ┌──⊰ _*🎉FUN🎉*_
+│⊳🎟️ ${prefix}flirt
+│⊳🎟️ ${prefix}shayari
+│⊳🎟️ ${prefix}night
 │⊳🎟️ ${prefix}truth
 │⊳🎟️ ${prefix}dare
 │⊳🎟️ ${prefix}couple 
@@ -1900,6 +2091,106 @@ Maria.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${men
 Maria.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${sender.split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [sender] }, { quoted: m })
 }
 break
+////////
+case 'hidetag': {  
+           if (!m.isGroup) return reply(mess.group)
+                if (!isAdmins && !isCreator) return reply(mess.admin)
+                if (!isBotAdmins) return reply(mess.botAdmin)
+ Maria.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+ }
+ break
+ case'admin': case 'tagadmin':{		
+ if (!m.isGroup) return reply(mess.group)
+                if (!isAdmins && !isCreator) return reply(mess.admin)
+                if (!isBotAdmins) return reply(mess.botAdmin)
+ if (!text) return replay(`*Please quote or write a meaningful message to tag admins to*`)
+ let teks = `*🧩𝗚𝗿𝗼𝘂𝗽 𝗔𝗱𝗺𝗶𝗻𝘀🧩*
+  
+ *Message : ${text}*\n\n`
+ for (let mem of groupAdmins) {
+ teks += `🤴 @${mem.split('@')[0]}\n`
+ }
+ Maria.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
+ }
+ break
+ 
+ /* 
+
+Kindly Do not remove Creadit to Avoid the Bugs and error 
+
+*/
+
+/* 
+
+Search Shizo The Techie on Google for more info.
+
+This Code is made with ❤️ by Shizo The Techie for Maria-MD (Ayush) 
+
+*/
+
+
+
+case 'shayari': case 'sayari':
+
+
+
+           if (!m.isGroup) return reply(mess.group)
+
+
+let devsiz = await fetch(`https://shizoapi.cyclic.app/api/texts/shayari?apikey=shizo`)
+
+let syri = await devsiz.json()
+
+let shayari = `${syri.result}`
+
+reply(shayari)
+
+
+
+break
+
+
+
+
+
+case 'night': case 'raat':
+
+
+
+           if (!m.isGroup) return reply(mess.group)
+
+
+let devsizn = await fetch(`https://shizoapi.cyclic.app/api/texts/lovenight?apikey=shizo`)
+
+let nyt = await devsizn.json()
+
+let night = `${nyt.result}`
+
+reply(night)
+
+
+
+break
+
+
+
+
+
+case 'flirt': case 'flirting':
+
+let devsizf = await fetch(`https://shizoapi.cyclic.app/api/texts/flirt?apikey=shizo`)
+
+let flrt = await devsizf.json()
+
+let flirt = `${flrt.result}`
+
+reply(flirt)
+
+
+
+break
+
+			    
          case 'pinterest':
       case 'pin': {
       if (!args.join(" ")) return reply(`${pushname} Please provide a search term!`);
@@ -1920,6 +2211,7 @@ break
         }
       }
         break;  
+			    
 case 'runtime': {
 Maria.sendMessage(from, { react: { text: "🔖", key: m.key }}) 
       
