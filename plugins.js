@@ -278,7 +278,9 @@ ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 memb = metadata.participants.length
 MariaWlcm = await getBuffer(ppuser)
 MariaLft = await getBuffer(ppuser)
+	
                 if (anu.action == 'add') {
+		if (!global.welcome) return;	
                 const Mariabuffer = await getBuffer(ppuser)
                 let MariaName = num
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
