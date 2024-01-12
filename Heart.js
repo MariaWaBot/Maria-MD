@@ -2192,6 +2192,25 @@ Maria.sendMessage(m.chat, { image: { url: dehe }, caption: `${mess.done}` }, { q
 }
 break
 
+case 'poll': {
+	if (!isCreator) return reply(mess.owner)
+            let [poll, opt] = text.split("|")
+            if (text.split("|") < 2)
+                return await reply(
+                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Ayush,Maria,Owner...`
+                )
+            let options = []
+            for (let i of opt.split(',')) {
+                options.push(i)
+            }
+            await Maria.sendMessage(m.chat, {
+                poll: {
+                    name: poll,
+                    values: options
+                }
+            })
+        }
+        break
 
 /////////////////////////////////////////////////////
 
