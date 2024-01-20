@@ -321,7 +321,8 @@ if (isCreator) return reply(bvl)
 Maria.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
-  
+  if (!m.isGroup) return replay(mess.pm)
+	    
             switch (command) {
             case 'antilink': {
                             if (!m.isGroup) return reply(mess.group)
