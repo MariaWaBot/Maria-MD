@@ -2230,7 +2230,102 @@ https://chat.whatsapp.com/${response}
 🔮 *BlackHeart* +919804160882
 \n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Maria-Md* `)
         break   
-    
+    case 'list': case 'listmenu': {  
+    const listmenu = require("./Gallery/lib/list.js");
+    Maria.sendMessage(m.chat, { video: { url: 'https://picfiles.alphacoders.com/623/623720.jpeg ' }, caption: listmenu }, { quoted: m });
+}
+break;
+
+case 'help1': case 'h1':{
+      
+const h3menu = require("./Gallery/lib/download.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+case 'help2': case 'h2':{
+      
+const h3menu = require("./Gallery/lib/general.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+  case 'help3': case 'h3':{
+      
+const h3menu = require("./Gallery/lib/owner.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+  
+  
+         case 'help4': case 'h4':{
+               
+const h4menu = require("./Gallery/lib/search.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h4menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+         case 'help5': case 'h5':{
+               
+         
+const h5menu = require("./Gallery/lib/group.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h5menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+         case 'help6' : case 'h6':{
+               
+const h6menu = require("./Gallery/lib/fun.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h6menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+         case 'help7': case 'h8':{
+               
+const h7menu = require("./Gallery/lib/weeb.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h7menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+         case 'help8': case 'h8':{
+               
+const h8menu = require("./Gallery/lib/Nsfw.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h8menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+         case 'help9': case 'h9' :{
+               
+const h9menu = require("./Gallery/lib/SnapBlend.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h9menu, gifPlayback: true }, { quoted: m });
+        }
+        break
+  
+  
+         case 'help10': case 'h10':{
+               
+const h10menu = require("./Gallery/lib/other.js")
+
+Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h10menu, gifPlayback: true }, { quoted: m });
+        }
+        break
     
 /////////////////////////////////////////////////////
 
