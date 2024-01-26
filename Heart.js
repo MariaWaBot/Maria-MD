@@ -321,6 +321,12 @@ if (isCreator) return reply(bvl)
 Maria.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
+	    //total features by xeon sir
+const mariafeature = () =>{
+            var mytext = fs.readFileSync("./Heart.js").toString()
+            var numUpper = (mytext.match(/case '/g) || []).length
+            return numUpper
+}
   
             switch (command) {
             case 'antilink': {
@@ -1565,6 +1571,7 @@ case 'truth':
 │⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: 𝗠𝗮𝗿𝗶𝗮-𝗠𝗱
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
 │⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
+│⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${mariafeature()}
 │⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: http://gg.gg/Maria-support
 ╰────────────┈平和
 Here's the list of my Commands.🔖
