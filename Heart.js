@@ -2227,15 +2227,15 @@ https://chat.whatsapp.com/${response}
         
   case 'mods': case 'developer': case 'dev': 
         
-            reply(` *━━━〈 🧧Maria Dev🧧 〉━━━*\n
-🔮 *Ayush* +919931122319
+        const devmod = ` *━━━〈 🧧Maria Dev🧧 〉━━━*\n
+🔮 *Ayush* @919931122319
 
-🔮 *xeon* +916909137213
+🔮 *xeon* @916909137213
 
-🔮 *Pikachu* +918811074852
-
-🔮 *BlackHeart* +919804160882
-\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Maria-Md* `)
+🔮 *Pikachu* @918811074852
+\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Maria-Md* `
+	Maria.sendMessage(m.chat, { text: "devmod", mentions: ["919931122319@s.whatsapp.net", "918811074852@s.whatsapp.net","916909137213@s.whatsapp.net"] }, { quoted:m });		    
+		  
         break   
     case 'list': case 'listmenu': {  
     const listmenu = require("./Gallery/lib/list.js");
