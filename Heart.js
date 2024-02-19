@@ -5,6 +5,7 @@ const fsx = require('fs-extra')
 const path = require('path')
 const util = require('util')
 const chalk = require('chalk')
+const mver = require('./package.json').version
 const moment = require('moment-timezone')
 const speed = require('performance-now')
 const ms = toMs = require('ms')
@@ -1567,18 +1568,24 @@ case 'truth':
                            
   case 'menu': case 'help': case 'h': 
   const txt = `╭─「 *Konichiwa* 」
-│⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
-│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: 𝗠𝗮𝗿𝗶𝗮-𝗠𝗱
-│⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
-│⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
+│⋊ 𝕌𝕤𝕖𝕣: ${pushname} 
+│⋊ 𝔹𝕠𝕥:  ${botname}
+│⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  *${prefix}*
+│⋊ 𝔻𝕒𝕥𝕖: ${xdate}
+│⋊ 𝕋𝕚𝕞𝕖:  ${xtime}
+│⋊ 𝕆𝕨𝕟𝕖𝕣: ${ownername}
+│⋊ 𝕧𝕖𝕣𝕤𝕚𝕠𝕟: ${mver}
+│⋊ ℍ𝕠𝕤𝕥: ${os.hostname()}
+│⋊ ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞: ${os.platform()} 
+│⋊ ℝ𝕦𝕟𝕥𝕚𝕞𝕖: ${runtime(process.uptime())}
 │⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${mariafeature()}
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: http://gg.gg/Maria-support
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Maria-support
 ╰────────────┈平和
 Here's the list of my Commands.🔖
 ${readmore}
 ┌──⊰ _*🧧GENERAL🧧*_
 │⊳ 🌿 ${prefix}hi
-│⊳ 🌿 ${prefix}developer
+│⊳ 🌿 ${prefix}dev
 │⊳ 🌿 ${prefix}info
 │⊳ 🌿 ${prefix}support
 │⊳ 🌿 ${prefix}rules
@@ -1604,7 +1611,6 @@ ${readmore}
 │⊳ ♠️ ${prefix}setppbot
 │⊳ ♠️ ${prefix}block
 │⊳ ♠️ ${prefix}unblock
-│⊳ ♠️ ${prefix}welcome [on/off]
 │⊳ ♠️ ${prefix}backup
 │⊳ ♠️ ${prefix}getcase
 │⊳ ♠️ ${prefix}creategc
@@ -1811,7 +1817,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-Maria.sendMessage(from, {text: `\`\`\``, contextInfo: { mentionedJid : mems }}, {quoted:m})
+Maria.sendMessage(from, {text:  `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiNsfw) return reply('Already deactivated')
 let off = isnsfw.indexOf(from)
