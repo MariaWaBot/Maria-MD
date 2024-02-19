@@ -146,9 +146,23 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 ```
 <br>
 <br>
-<h1 align="center">  🔮 Thanks To 🔮
-</h1>
+ <h1>Collaborators</h1>
 
-* [`🧧Xeon`](https://github.com/dgxeon)
+  <div class="contributors">
+    <div class="contributor">
+      <p>1. <strong>Teamolduser</strong></p>
+      <p class="github-link"><a href="https://github.com/Teamolduser">@Teamolduser</a></p>
+    </div>
+    
+    <div class="contributor">
+      <p>2. <strong>PikaBotz</strong></p>
+      <p class="github-link"><a href="https://github.com/PikaBotz">@PikaBotz</a></p>
+    </div>
 
-* [`🧧Pikachu`](https://github.com/PikaBotz)
+    <div class="contributor">
+      <p>3. <strong>DGXeon</strong></p>
+      <p class="github-link"><a href="https://github.com/DGXeon">@DGXeon</a></p>
+    </div>
+  </div>
+
+  <p>Feel free to contribute and make this project even more awesome!</p>
