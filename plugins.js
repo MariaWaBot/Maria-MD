@@ -264,7 +264,10 @@ printRainbowMessage();
         await fs.writeFileSync(trueFileName, buffer)
         return trueFileName
     }
+
+//welcome
 Maria.ev.on('group-participants.update', async (anu) => {
+    	if (global.welcome){
 console.log(anu)
 try {
 let metadata = await Maria.groupMetadata(anu.id)
@@ -280,25 +283,22 @@ ppgroup = await Maria.profilePictureUrl(anu.id, 'image')
 } catch (err) {
 ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
-//welcome\\
+	
 memb = metadata.participants.length
 MariaWlcm = await getBuffer(ppuser)
 MariaLft = await getBuffer(ppuser)
-	
                 if (anu.action == 'add') {
-		if (!global.welcome) return;	
                 const Mariabuffer = await getBuffer(ppuser)
                 let MariaName = num
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                Mariabody = `┌──⊰ 🎗𝑾𝑬𝑳𝑳𝑪𝑶𝑴𝑬🎗⊰
+Mariabody = `┌──⊰ 🎗𝑾𝑬𝑳𝑪𝑶𝑴𝑬🎗⊰
 │⊳  🌐 To: ${metadata.subject}
 │⊳  📋 Name: @${MariaName.split("@")[0]}
 │⊳  👥 Members: ${xmembers}th
 │⊳  🕰️ Joined: ${xtime} ${xdate}
-└──────────⊰
-`
+└──────────⊰`
 Maria.sendMessage(anu.id,
  { text: Mariabody,
  contextInfo:{
@@ -316,53 +316,14 @@ Maria.sendMessage(anu.id,
                     const Mariatime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	                const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let MariaName = num
-                    const Mariamembers = metadata.participants.length
-  Mariabody = `┌──⊰🍁𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳🍁⊰
+                    const Mariamembers = metadata.participants.length  
+     Mariabody = `┌──⊰🍁𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳🍁⊰
 │⊳  👤 From: ${metadata.subject}
 │⊳  📃 Reason: Left
 │⊳  📔 Name: @${MariaName.split("@")[0]}
 │⊳  👥 Members: ${Mariamembers}th
 │⊳  🕒 Time: ${Mariatime} ${Mariadate}
-└──────────⊰
-
-
-`
-Maria.sendMessage(anu.id,
- { text: Mariabody,
- contextInfo:{
- mentionedJid:[num],
- "externalAdReply": {"showAdAttribution": true,
- "containsAutoReply": true,
- "title": ` ${global.botname}`,
-"body": `${ownername}`,
- "previewType": "PHOTO",
-"thumbnailUrl": ``,
-"thumbnail": MariaLft,
-"sourceUrl": `${link}`}}})
-} else if (anu.action == 'promote') {
-const Mariabuffer = await getBuffer(ppuser)
-const Mariatime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-let MariaName = num
-Mariabody = ` 𝗖𝗼𝗻𝗴𝗿𝗮𝘁𝘀🎉 @${MariaName.split("@")[0]}, you have been *promoted* to *admin* 🥳`
-   Maria.sendMessage(anu.id,
- { text: Mariabody,
- contextInfo:{
- mentionedJid:[num],
- "externalAdReply": {"showAdAttribution": true,
- "containsAutoReply": true,
- "title": ` ${global.botname}`,
-"body": `${ownername}`,
- "previewType": "PHOTO",
-"thumbnailUrl": ``,
-"thumbnail": MariaWlcm,
-"sourceUrl": `${link}`}}})
-} else if (anu.action == 'demote') {
-const Mariabuffer = await getBuffer(ppuser)
-const Mariatime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-let MariaName = num
-Mariabody = `𝗢𝗼𝗽𝘀‼️ @${MariaName.split("@")[0]}, you have been *demoted* from *admin* 😬`
+└──────────⊰`
 Maria.sendMessage(anu.id,
  { text: Mariabody,
  contextInfo:{
@@ -380,8 +341,8 @@ Maria.sendMessage(anu.id,
 } catch (err) {
 console.log(err)
 }
+}
 })
-
     Maria.downloadMediaMessage = async (message) => {
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
