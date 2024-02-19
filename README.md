@@ -146,7 +146,8 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 ```
 <br>
 <br>
- **Collaborators**
+ <h2 align="center"> 🔖Thanks to
+</h2>
 
 1. **Teamolduser**
    - GitHub: [@Teamolduser](https://github.com/Teamolduser)
