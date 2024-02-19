@@ -22,7 +22,7 @@ global.wm = "Ayush botz inc."
 global.link = 'https://whatsapp.com/channel/0029VaImo5ZG3R3qjKOdyr1I'
 
 //custom prefix
-global.prefa = ['!']
+global.prefa = ['.']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
