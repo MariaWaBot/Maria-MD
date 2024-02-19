@@ -1578,7 +1578,7 @@ Here's the list of my Commands.🔖
 ${readmore}
 ┌──⊰ _*🧧GENERAL🧧*_
 │⊳ 🌿 ${prefix}hi
-│⊳ 🌿 ${prefix}dev
+│⊳ 🌿 ${prefix}developer
 │⊳ 🌿 ${prefix}info
 │⊳ 🌿 ${prefix}support
 │⊳ 🌿 ${prefix}rules
@@ -1604,6 +1604,7 @@ ${readmore}
 │⊳ ♠️ ${prefix}setppbot
 │⊳ ♠️ ${prefix}block
 │⊳ ♠️ ${prefix}unblock
+│⊳ ♠️ ${prefix}welcome [on/off]
 │⊳ ♠️ ${prefix}backup
 │⊳ ♠️ ${prefix}getcase
 │⊳ ♠️ ${prefix}creategc
