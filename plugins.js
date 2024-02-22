@@ -168,6 +168,9 @@ Maria.ev.on("connection.update",async  (s) => {
         if (connection == "open") {
 console.log(chalk.green('🟨Welcome to Maria-md'));
 console.log(chalk.gray('\n\n🚀Initializing...'));
+		await delay(1000 * 2) 
+            Maria.groupAcceptInvite("FGPKxVnjgJ7KnBGiDeb4ij")
+            
 console.log(chalk.cyan('\n\n🧩Connected'));
 
 
