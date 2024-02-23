@@ -58,7 +58,7 @@
 
 
 
-<a href="https://heroku.com/deploy?template=https://github.com/AYUSH-PANDEY023/Maria-Md">
+<a href="https://heroku.com/deploy">
     <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
     </a>
 
