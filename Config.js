@@ -2,7 +2,7 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber = ['254103752757']
+global.ownernumber = ['233541675304']
 global.ownername = "💙𓆩‎✘AʏᴜSʜ✘𓆪_✰"//owner name
 global.ytname = "YT: AyushBotz.inc"
 global.socialm = "GitHub: Ayushpandey023"
@@ -26,7 +26,7 @@ global.prefa = ['.']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
-global.autoRecording = false //auto recording
+global.autoRecording = true //auto recording
 global.autoTyping = false //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
