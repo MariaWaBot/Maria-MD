@@ -1,6 +1,6 @@
 {
     "name": "Maria-Bot",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "description": "WhatsApp Bot Using Nodejs",
     "main": "index.js",
     "type": "commonjs",
