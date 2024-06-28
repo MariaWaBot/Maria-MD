@@ -2912,7 +2912,7 @@ await Maria.relayMessage(othmsg.key.remoteJid, othmsg.message, {
  break
     
        
-  case 'gamesmenu':
+  case 'gamemenu':
     const gamesmenu = `┌──⊰ _*🃏Games🃏*_
 │⊳ 🎰 ${prefix}slot
 │⊳ 🎰 ${prefix}poker
