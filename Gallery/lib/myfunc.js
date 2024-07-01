@@ -248,7 +248,7 @@ exports.getGroupAdmins = (participants) => {
  * @param {Object} m 
  * @param {store} store 
  */
-exports.smsg = (XeonBotInc, m, store) => {
+exports.smsg = (Maria, m, store) => {
     if (!m) return m
     let M = proto.WebMessageInfo
     if (m.key) {
@@ -257,8 +257,8 @@ exports.smsg = (XeonBotInc, m, store) => {
         m.chat = m.key.remoteJid
         m.fromMe = m.key.fromMe
         m.isGroup = m.chat.endsWith('@g.us')
-        m.sender = XeonBotInc.decodeJid(m.fromMe && XeonBotInc.user.id || m.participant || m.key.participant || m.chat || '')
-        if (m.isGroup) m.participant = XeonBotInc.decodeJid(m.key.participant) || ''
+        m.sender = Maria.decodeJid(m.fromMe && Maria.user.id || m.participant || m.key.participant || m.chat || '')
+        if (m.isGroup) m.participant = Maria.decodeJid(m.key.participant) || ''
     }
     if (m.message) {
         m.mtype = getContentType(m.message)
@@ -280,14 +280,14 @@ exports.smsg = (XeonBotInc, m, store) => {
             m.quoted.id = m.msg.contextInfo.stanzaId
             m.quoted.chat = m.msg.contextInfo.remoteJid || m.chat
             m.quoted.isBaileys = m.quoted.id ? m.quoted.id.startsWith('BAE5') && m.quoted.id.length === 16 : false
-            m.quoted.sender = XeonBotInc.decodeJid(m.msg.contextInfo.participant)
-            m.quoted.fromMe = m.quoted.sender === (XeonBotInc.user && XeonBotInc.user.id)
+            m.quoted.sender = Maria.decodeJid(m.msg.contextInfo.participant)
+            m.quoted.fromMe = m.quoted.sender === (Maria.user && Maria.user.id)
             m.quoted.text = m.quoted.text || m.quoted.caption || m.quoted.conversation || m.quoted.contentText || m.quoted.selectedDisplayText || m.quoted.title || ''
             m.quoted.mentionedJid = m.msg.contextInfo ? m.msg.contextInfo.mentionedJid : []
             m.getQuotedObj = m.getQuotedMessage = async () => {
                 if (!m.quoted.id) return false
-                let q = await store.loadMessage(m.chat, m.quoted.id, XeonBotInc)
-                return exports.smsg(XeonBotInc, q, store)
+                let q = await store.loadMessage(m.chat, m.quoted.id, Maria)
+                return exports.smsg(Maria, q, store)
             }
             let vM = m.quoted.fakeObj = M.fromObject({
                 key: {
@@ -305,7 +305,7 @@ exports.smsg = (XeonBotInc, m, store) => {
              * 
              * @returns 
              */
-            m.quoted.delete = () => XeonBotInc.sendMessage(m.quoted.chat, {
+            m.quoted.delete = () => Maria.sendMessage(m.quoted.chat, {
                 delete: vM.key
             })
 
@@ -316,16 +316,16 @@ exports.smsg = (XeonBotInc, m, store) => {
              * @param {*} options 
              * @returns 
              */
-            m.quoted.copyNForward = (jid, forceForward = false, options = {}) => XeonBotInc.copyNForward(jid, vM, forceForward, options)
+            m.quoted.copyNForward = (jid, forceForward = false, options = {}) => Maria.copyNForward(jid, vM, forceForward, options)
 
             /**
              *
              * @returns
              */
-            m.quoted.download = () => XeonBotInc.downloadMediaMessage(m.quoted)
+            m.quoted.download = () => Maria.downloadMediaMessage(m.quoted)
         }
     }
-    if (m.msg.url) m.download = () => XeonBotInc.downloadMediaMessage(m.msg)
+    if (m.msg.url) m.download = () => Maria.downloadMediaMessage(m.msg)
     m.text = m.msg.text || m.msg.caption || m.message.conversation || m.msg.contentText || m.msg.selectedDisplayText || m.msg.title || ''
     /**
      * Reply to this message
@@ -333,16 +333,16 @@ exports.smsg = (XeonBotInc, m, store) => {
      * @param {String|false} chatId 
      * @param {Object} options 
      */
-    m.reply = (text, chatId = m.chat, options = {}) => Buffer.isBuffer(text) ? XeonBotInc.sendMedia(chatId, text, 'file', '', m, {
+    m.reply = (text, chatId = m.chat, options = {}) => Buffer.isBuffer(text) ? Maria.sendMedia(chatId, text, 'file', '', m, {
         ...options
-    }) : XeonBotInc.sendText(chatId, text, m, {
+    }) : Maria.sendText(chatId, text, m, {
         ...options
     })
     /**
      * Copy this message
      */
-    m.copy = () => exports.smsg(XeonBotInc, M.fromObject(M.toObject(m)))
-
+    m.copy = () => exports.smsg(Maria, M.fromObject(M.toObject(m)))
+m.edit = (text, key, options = {}) => Maria.sendMessage(m.chat, { text: text, mentions: options.mentions, edit: key })
     /**
      * 
      * @param {*} jid 
@@ -350,7 +350,7 @@ exports.smsg = (XeonBotInc, m, store) => {
      * @param {*} options 
      * @returns 
      */
-    m.copyNForward = (jid = m.chat, forceForward = false, options = {}) => XeonBotInc.copyNForward(jid, m, forceForward, options)
+    m.copyNForward = (jid = m.chat, forceForward = false, options = {}) => Maria.copyNForward(jid, m, forceForward, options)
 
     return m
 }
